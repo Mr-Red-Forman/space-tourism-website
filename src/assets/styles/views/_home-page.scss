@@ -1,6 +1,14 @@
-
-.home-page{
-    // background-image: url("../../../../public/assets/home/background-home-desktop.jpg");
-    // background-size: cover;
+.home-page {
+    background-size: cover;
     min-height: 100vh;
+
+    background-image: url("../../../../public/assets/home/background-home-mobile.jpg");
+
+    @include for-narrow-layout {
+        background-image: url("../../../../public/assets/home/background-home-tablet.jpg");
+    }
+
+    @include for-normal-layout {
+        background-image: url("../../../../public/assets/home/background-home-desktop.jpg");
+    }
 }
