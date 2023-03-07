@@ -1,6 +1,7 @@
 .main-layout {
     display: grid;
-    grid-template-columns: minmax($small-padding,1fr) $small-CW minmax($small-padding,1fr);
+    grid-template-columns: $small-padding minmax($small-CW,auto) $small-padding;
+    width: 100vw;
 
     > * {
         grid-column: 2;
