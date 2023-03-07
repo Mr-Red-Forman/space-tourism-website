@@ -1,0 +1,101 @@
+/* Breakpoint mixins */
+
+
+@mixin for-narrow-layout {
+  @media (min-width: calc($mobile-breakpoint + 40px)) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: calc($narrow-breakpoint + 40px)) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: calc($normal-breakpoint + 40px)) {
+    @content;
+  }
+}
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: calc(($height / $width) * 100%);
+  }
+
+  >* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  >img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//mix for typing
+
+@mixin heading1 {
+  font-family: Bellefair-Regular;
+  font-size: $heading1-fs;
+}
+
+@mixin heading2 {
+  font-family: Bellefair-Regular;
+  font-size: $heading2-fs;
+}
+
+@mixin heading3 {
+  font-family: Bellefair-Regular;
+  font-size: $heading3-fs;
+}
+
+@mixin heading4 {
+  font-family: Bellefair-Regular;
+  font-size: $heading4-fs;
+}
+
+@mixin heading5 {
+  font-family: Bellefair-Regular;
+  font-size: $heading5-fs;
+  letter-spacing:4.75;
+
+}
+
+@mixin subheading1 {
+  font-family: Bellefair-Regular;
+  font-size: $subheading1-fs;
+}
+
+@mixin subheading2 {
+  font-family: BarlowCondensed-Regular;
+  font-size: $subheading2-fs;
+  letter-spacing:2.35;
+}
+
+@mixin nac-txt {
+  font-family: BarlowCondensed-Regular;
+  font-size: $nav-txt-fs;
+  letter-spacing:2.7;
+}

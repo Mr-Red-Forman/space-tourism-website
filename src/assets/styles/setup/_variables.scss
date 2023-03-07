@@ -1,0 +1,28 @@
+// Colors
+$clr1: #0B0D17;
+$clr2: #D0D6F9;
+$clr3: #FFFFFF;
+
+$clrHover:#979797;
+
+
+
+// content wide
+$small-CW: 460px;
+$medium-CW: 720px;
+$wide-CW: 960px;
+
+// padding
+$small-padding:rem(8px);
+$medium-padding:rem(16px);
+$wide-padding:rem(24px);
+
+// brake points
+$small-BP:$small-CW*$small-padding;
+$medium-BP:$medium-CW*$medium-padding;
+$wide-BP:$wide-CW*$wide-padding;
+
+
+
+
+
