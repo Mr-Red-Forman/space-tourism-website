@@ -1,0 +1,83 @@
+.app-header {
+    left: 0;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
+
+    .logo {
+        grid-area: 1/1/2/2;
+        background-image: url('../../../../public/assets/shared/logo.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 36px 36px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .decoration-line {
+            width: 50px;
+            height: 1px;
+            z-index: 5;
+
+            .line {
+                position: relative;
+                background-color: $clr-white;
+                width: 473px;
+                height: 1px;
+            }
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.151);
+            backdrop-filter: blur(5px);
+            // width: 510px;
+            flex: 0 0 510px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0
+        }
+
+        a {
+            @include nav-txt;
+            margin-left: 48px;
+            display: inline-flex;
+            align-items: center;
+            height: 96px;
+            color: $clr-white;
+            text-transform: uppercase;
+
+            span {
+                margin-right: 10px;
+            }
+
+            &:hover,
+            &.active {
+                box-shadow: inset 0px -3px 0 0;
+            }
+        }
+
+    }
+
+    .linkBox {
+        grid-column: 3;
+        display: inline-grid;
+        position: relative;
+        height: 96px;
+        align-self: center;
+        background-color: rgba(255, 255, 255, 0.151);
+        backdrop-filter: blur(5px);
+
+    }
+
+
+}

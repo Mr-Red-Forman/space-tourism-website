@@ -1,11 +1,14 @@
 .home-page {
-    background-size: cover;
-    min-height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: grid;
 
     background-image: url("../../../../public/assets/home/background-home-mobile.jpg");
 
     @include for-narrow-layout {
         background-image: url("../../../../public/assets/home/background-home-tablet.jpg");
+        
     }
 
     @include for-normal-layout {

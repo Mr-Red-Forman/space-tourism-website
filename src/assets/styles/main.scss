@@ -12,7 +12,10 @@
 
 // views
 
-@import "views/home-page";
+@import "views/home";
+@import "views/destination";
+@import "views/crow";
+@import "views/technology";
 
 // components
-
+@import "components/app-header"

@@ -1,0 +1,16 @@
+.crew-page {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-image: url("../../../../public/assets/crew/background-crew-mobile.jpg");
+
+    @include for-narrow-layout {
+        background-image: url("../../../../public/assets/crew/background-crew-tablet.jpg");
+        
+    }
+
+    @include for-normal-layout {
+        background-image: url("../../../../public/assets/crew/background-crew-desktop.jpg");
+    }
+}

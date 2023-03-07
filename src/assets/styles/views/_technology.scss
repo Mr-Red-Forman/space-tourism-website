@@ -1,0 +1,16 @@
+.technology-page{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-image: url("../../../../public/assets/technology/background-technology-mobile.jpg");
+
+    @include for-narrow-layout {
+        background-image: url("../../../../public/assets/technology/background-technology-tablet.jpg");
+        
+    }
+
+    @include for-normal-layout {
+        background-image: url("../../../../public/assets/technology/background-technology-desktop.jpg");
+    }
+}

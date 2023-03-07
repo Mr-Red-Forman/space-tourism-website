@@ -89,8 +89,20 @@
   letter-spacing:2.35;
 }
 
-@mixin nac-txt {
+@mixin nav-txt {
   font-family: BarlowCondensed-Regular;
   font-size: $nav-txt-fs;
   letter-spacing:2.7;
+}
+
+@mixin flex-center{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin flex-center-between{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }

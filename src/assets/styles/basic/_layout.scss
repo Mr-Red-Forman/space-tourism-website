@@ -1,7 +1,7 @@
 .main-layout {
     display: grid;
     grid-template-columns: minmax($small-padding,1fr) $small-CW minmax($small-padding,1fr);
-    
+
     > * {
         grid-column: 2;
 
