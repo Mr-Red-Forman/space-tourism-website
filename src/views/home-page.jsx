@@ -1,7 +1,5 @@
 export function HomePage(){
-    return <section className="home-page">
-        
-
+    return <section className="main-layout home-page">
 
     </section>
 }

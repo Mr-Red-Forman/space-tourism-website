@@ -1,0 +1,31 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: minmax($small-padding,1fr) $small-CW minmax($small-padding,1fr);
+    background-color: red;
+
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+
+    @include for-narrow-layout {
+        background-color: blue;
+        grid-template-columns: 
+            minmax($medium-padding, 1fr)
+            minmax(auto, $medium-CW)
+            minmax($medium-padding, 1fr);
+    }
+    @include for-normal-layout {
+        background-color: yellow;
+        grid-template-columns: 
+            minmax($normal-padding, 1fr)
+            minmax(auto, $wide-CW)
+            minmax($normal-padding, 1fr);
+    }
+}
+
+
+

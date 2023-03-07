@@ -8,19 +8,19 @@ $clrHover:#979797;
 
 
 // content wide
-$small-CW: 460px;
+$small-CW: 325px;
 $medium-CW: 720px;
 $wide-CW: 960px;
 
 // padding
-$small-padding:rem(8px);
-$medium-padding:rem(16px);
-$wide-padding:rem(24px);
+$small-padding:24px;
+$medium-padding:24px;
+$normal-padding:32px;
 
 // brake points
-$small-BP:$small-CW*$small-padding;
-$medium-BP:$medium-CW*$medium-padding;
-$wide-BP:$wide-CW*$wide-padding;
+$small-BP:calc($small-CW + calc(2*$small-padding));
+$medium-BP:calc($medium-CW + calc(2*$medium-padding));
+$normal-BP:calc($wide-CW + calc(2*$normal-padding));
 
 
 

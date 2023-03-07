@@ -4,6 +4,12 @@
 @import "setup/mixins";
 @import "setup/typography";
 
+// base 
+
+@import "basic/base";
+@import "basic/layout";
+
+
 // views
 
 @import "views/home-page";
