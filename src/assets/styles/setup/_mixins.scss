@@ -54,6 +54,8 @@
 @mixin heading1 {
   font-family: Bellefair-Regular;
   font-size: $heading1-fs;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 @mixin heading2 {
@@ -72,9 +74,11 @@
 }
 
 @mixin heading5 {
-  font-family: Bellefair-Regular;
+  font-family: BarlowCondensed-Regular;
   font-size: $heading5-fs;
-  letter-spacing:4.75;
+  letter-spacing:4.75px;
+  font-weight: 400;
+  text-transform: uppercase;
 
 }
 
@@ -93,6 +97,11 @@
   font-family: BarlowCondensed-Regular;
   font-size: $nav-txt-fs;
   letter-spacing:2.7;
+}
+@mixin info-txt {
+  font-family: BarlowCondensed-Regular;
+  font-size: $info-txt-fs;
+  line-height: 32px;
 }
 
 @mixin flex-center{
