@@ -10,7 +10,7 @@ export function AppHeader() {
             <section className="main-layout ">
                 <main>
                     <div className="logo">
-                        <img src='assets/shared/logo.svg' alt="logo" />
+                        <img src='/assets/shared/logo.svg' alt="logo" />
                     </div>
                     <span className="decoration-line">
                         <div className="line"></div>
@@ -20,7 +20,7 @@ export function AppHeader() {
                         <NavLink to="/" className=''>
                             <span className="pageNumber">00</span> Home
                         </NavLink>
-                        <NavLink to="destination" className=''>
+                        <NavLink to="destination/Moon" className=''>
                             <span className="pageNumber">01</span> destination
                         </NavLink>
                         <NavLink to="crow" className=''>
@@ -31,7 +31,7 @@ export function AppHeader() {
                         </NavLink>
                     </nav>
                     <button className="menu-toggle-btn" onClick={()=>setMenubar(!menuBar)}>
-                        <img src="assets/shared/icon-hamburger.svg" alt="open-menu" />
+                        <img src="/assets/shared/icon-hamburger.svg" alt="open-menu" />
                     </button>
                 </main>
                 <span className="linkBox">

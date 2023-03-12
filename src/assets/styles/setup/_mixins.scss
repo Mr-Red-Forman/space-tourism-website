@@ -61,6 +61,8 @@
 @mixin heading2 {
   font-family: Bellefair-Regular;
   font-size: $heading2-fs;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 @mixin heading3 {
@@ -85,23 +87,43 @@
 @mixin subheading1 {
   font-family: Bellefair-Regular;
   font-size: $subheading1-fs;
+  text-transform: uppercase;
+
 }
 
 @mixin subheading2 {
   font-family: BarlowCondensed-Regular;
   font-size: $subheading2-fs;
-  letter-spacing:2.35;
+  letter-spacing:2.35px;
+  text-transform: uppercase;
+
 }
 
 @mixin nav-txt {
   font-family: BarlowCondensed-Regular;
   font-size: $nav-txt-fs;
-  letter-spacing:2.7;
+  letter-spacing:2.7px;
+  line-height: 19.2px;
+  display: inline-flex;
+  align-items: center;
+  color: $clr-white;
+  text-transform: uppercase;
+  &:hover{
+    color:$clrHover
+
+  }
+  &:hover,
+  &.active {
+      box-shadow: inset 0px -3px 0 0;
+  }
 }
 @mixin info-txt {
   font-family: BarlowCondensed-Regular;
   font-size: $info-txt-fs;
   line-height: 32px;
+  letter-spacing:2.3px;
+  font-weight: 400;
+
 }
 
 @mixin flex-center{

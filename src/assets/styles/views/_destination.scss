@@ -5,12 +5,166 @@
 
     background-image: url("../../../../public/assets/destination/background-destination-mobile.jpg");
 
+    .display-continuer {
+        display: grid;
+        margin: auto 0 10% 0;
+
+
+        .star-img {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include flex-center;
+
+            h2 {
+                @include heading5;
+                text-align: center;
+
+                .pageNumber {
+                    margin-right: 28px;
+                    color: $clrHover;
+                    font-weight: bold;
+                }
+            }
+
+            .planet-img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    padding: 50px 10% 0 50px;
+                    width: 75%;
+                }
+            }
+
+        }
+
+        .star-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5% 0 0 auto;
+
+            nav {
+                @include flex-center;
+                justify-content: space-between;
+
+                a {
+                    @include nav-txt;
+                    margin:35px 26px;
+                    align-items: start;
+                    height: 34px;
+                    text-align: center
+                }
+            }
+
+            h1 {
+                @include heading2;
+                margin-bottom: 24px
+            }
+
+            p {
+                @include info-txt;
+                margin-bottom: 0;
+                color: $clr-white;
+                margin-bottom: 54px;
+                text-align: center;
+            }
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: $clr-white;
+                margin-bottom: 28px;
+            }
+
+            .travel-info {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+                width: 55%;
+                gap: 32px;
+
+                .sub-title {
+                    @include subheading2;
+                    margin-bottom: 12px;
+                }
+
+                .data {
+                    @include subheading1;
+                }
+
+            }
+        }
+
+    }
+
     @include for-narrow-layout {
         background-image: url("../../../../public/assets/destination/background-destination-tablet.jpg");
-        
+
+        .display-continuer {
+            .star-img {
+                h2 {
+                    text-align: start;
+                }
+
+            }
+
+            .star-description {
+                display: flex;
+                flex-direction: column;
+            }
+
+        }
+
     }
 
     @include for-normal-layout {
+        .display-continuer {
+            grid-template-columns: 1fr 1fr;
+
+            .star-img {
+                justify-content: start;
+
+                .planet-img {
+                    justify-self: flex-end;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .star-description {
+                margin-top: 15%;
+                width: 450px;
+                align-items: start;
+
+                nav{
+                    a{
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                    }
+
+                }
+
+                p {
+                    text-align: start;
+                }
+
+                .travel-info {
+                    text-align: start;
+                    width: 75%;
+                }
+            }
+        }
+
         background-image: url("../../../../public/assets/destination/background-destination-desktop.jpg");
     }
+
+
 }

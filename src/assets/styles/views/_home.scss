@@ -84,11 +84,8 @@
         }
 
     }
-
     // @include for-narrow-layout {}
-
     @include for-normal-layout {
-
         main {
             grid-template-columns: 1fr 1fr;
             margin: auto 0 10% 0;

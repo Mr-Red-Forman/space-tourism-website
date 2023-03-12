@@ -1,5 +1,5 @@
 // system 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom"
 import { Provider } from 'react-redux'
 // import { BrowserRouter HashRouter as Router } from 'react-router-dom'
 // import { store } from './store/store'
@@ -17,17 +17,18 @@ import { AppHeader } from "./components/app-header"
 export function RootCmp() {
   return (
     // <Provider store={store}>
-      <Router>
-          <AppHeader />
-          <main className="">
-            <Routes>
-              <Route index element={<HomePage/>} errorElement= {<ErrorPage />}/>
-              <Route path='destination' element={<Destination/>} errorElement= {<ErrorPage />}/>
-              <Route path='crow' element={<Crow/>} errorElement= {<ErrorPage />}/>
-              <Route path='technology' element={<Technology/>} errorElement= {<ErrorPage />}/>
-            </Routes>
-          </main>
-      </Router>
+    <Router>
+      <AppHeader />
+      <main className="">
+        <Routes>
+          <Route index element={<HomePage />} errorElement={<ErrorPage />} />
+          <Route path='destination/:planet' element={<Destination />} errorElement={<ErrorPage />} />
+          <Route path='destination/*' element={<Navigate to='Moon' />} errorElement={<ErrorPage />} />
+          <Route path='crow' element={<Crow />} errorElement={<ErrorPage />} />
+          <Route path='technology' element={<Technology />} errorElement={<ErrorPage />} />
+        </Routes>
+      </main>
+    </Router>
     // </Provider>
   )
 
