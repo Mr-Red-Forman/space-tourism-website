@@ -85,12 +85,7 @@
 
     }
 
-    @include for-narrow-layout {
-
-        .welcomeBtn {
-           
-        }
-    }
+    // @include for-narrow-layout {}
 
     @include for-normal-layout {
 
@@ -99,7 +94,9 @@
             margin: auto 0 10% 0;
 
             .welcomeText {
-                text-align: start;                
+                text-align: start; 
+                justify-self: start;
+
             }
 
             .welcomeBtn {
