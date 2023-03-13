@@ -10,11 +10,9 @@ export function Destination() {
     if (currPlanet === -1) navigate('Moon')
   }, [planet])
   currPlanet = data.destinations[currPlanet]
-  console.log('currPlanet:', currPlanet)
-
   return (
     <section className="main-layout destination">
-      <main className="display-continuer">
+      <main className="full main-layout display-continuer">
         <article className="star-img">
           <h2> <span className="pageNumber">01</span> pick your destination</h2>
           <div className="planet-img">

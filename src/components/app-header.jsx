@@ -1,10 +1,17 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 export function AppHeader() {
-    const [menuBar, setMenubar]= useState(false)
-
-    console.log('menuBar:',menuBar )
+    const [menuBar, setMenubar] = useState(false)
+    let location = useLocation()
+    let currLoc
+    useEffect(() => {
+        if (currLoc!==location.pathname) {
+            setMenubar(()=>false)
+            currLoc=location.pathname
+        }
+    }, [location.pathname])
+    
     return (
         <header className="app-header">
             <section className="main-layout ">
@@ -15,8 +22,8 @@ export function AppHeader() {
                     <span className="decoration-line">
                         <div className="line"></div>
                     </span>
-                    <nav className={menuBar? 'active': null}>
-                        <button className="exit-menu" onClick={()=>setMenubar(!menuBar)}>X </button>
+                    <nav className={menuBar ? 'active' : null}>
+                        <button className="exit-menu" onClick={() => setMenubar(!menuBar)}>X </button>
                         <NavLink to="/" className=''>
                             <span className="pageNumber">00</span> Home
                         </NavLink>
@@ -30,7 +37,7 @@ export function AppHeader() {
                             <span className="pageNumber">03</span> technology
                         </NavLink>
                     </nav>
-                    <button className="menu-toggle-btn" onClick={()=>setMenubar(!menuBar)}>
+                    <button className="menu-toggle-btn" onClick={() => setMenubar(!menuBar)}>
                         <img src="/assets/shared/icon-hamburger.svg" alt="open-menu" />
                     </button>
                 </main>

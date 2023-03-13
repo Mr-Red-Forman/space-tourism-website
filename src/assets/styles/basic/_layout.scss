@@ -1,10 +1,10 @@
 .main-layout {
     display: grid;
-    grid-template-columns: $small-padding minmax($small-CW,auto) $small-padding;
-    width: 100vw;
-
+    grid-template-columns: minmax($small-padding,auto) minmax($small-CW, auto) minmax($small-padding,auto);
+    
     > * {
         grid-column: 2;
+        max-width: 100%;
 
         &.full {
             grid-column: 1 /-1;
@@ -13,15 +13,15 @@
 
     @include for-narrow-layout {
         grid-template-columns: 
-            minmax($medium-padding, 1fr)
+            minmax($medium-padding,auto)
             minmax(auto, $medium-CW)
-            minmax($medium-padding, 1fr);
+            minmax($medium-padding,auto)
     }
     @include for-normal-layout {
         grid-template-columns: 
-            minmax($normal-padding, 1fr)
+            minmax($normal-padding, auto)
             minmax(auto, $wide-CW)
-            minmax($normal-padding, 1fr);
+            minmax($normal-padding, auto);
     }
 }
 
